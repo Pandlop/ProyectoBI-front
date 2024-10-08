@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Router, Routes } from "react-router-dom";
+import Endpoint1 from "./components/endpoint1/endpoint1";
+import Endpoint2 from "./components/endpoint2/endpoint2";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<Endpoint1 />} />
+				<Route path="/reentrenar" element={<Endpoint2 />} />
+			</Routes>
+		</Router>
+	);
 }
 
 export default App;
