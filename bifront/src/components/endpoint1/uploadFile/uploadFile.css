@@ -3,6 +3,7 @@
 	overflow: hidden;
 	color: white;
 	border-radius: 27px;
+	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
 	margin: 1.3em;
 	padding: 1em;
 }
