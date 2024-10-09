@@ -1,0 +1,9 @@
+.endpoint1-org {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.endpoint1-separ {
+	flex-grow: 1;
+}
