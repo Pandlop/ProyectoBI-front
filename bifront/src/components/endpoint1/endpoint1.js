@@ -1,36 +1,22 @@
+import { Col, Row } from "react-bootstrap";
 import SideDashboard from "../sideDashboard/sideDashboard";
-import Card from "../cardComponent/card";
-// import cardComp  from "../cardComponent/card";
+import UploadFile from "./uploadFile/uploadFile";
+
 function Endpoint1() {
 	return (
 		<>
-			<SideDashboard />
-
-			
-			<div style={{ padding: '20px' }}>
-
-
-			<Card color="#33415C">
-				<h1>F1 Score</h1>
-				<p>78%</p>
-			</Card>
-
-			<Card color="#33415C">
-				<h1>Accuracy</h1>
-				<p>85%</p>
-			</Card>
-
-			
-			</div>
-
-
+			<Row>
+				<Col>
+					<SideDashboard />
+				</Col>
+				<Col>
+					<Row>
+						<UploadFile />
+					</Row>
+					<Row></Row>
+				</Col>
+			</Row>
 		</>
-
-
-
-
-
-	
 	);
 }
 export default Endpoint1;
