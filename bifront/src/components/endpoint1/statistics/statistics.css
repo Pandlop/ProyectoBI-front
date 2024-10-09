@@ -12,3 +12,12 @@
 	font-weight: bold;
 	font-size: 1.7rem;
 }
+
+.stats-text {
+	margin-top: 1rem;
+}
+
+.accuracy-highlight {
+	color: #00a8ff;
+	font-weight: bold;
+}

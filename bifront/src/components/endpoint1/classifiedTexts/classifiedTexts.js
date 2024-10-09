@@ -9,7 +9,7 @@ function ClassifiedTexts() {
 					<h2 className="table-title">Textos clasificados</h2>
 				</Card.Title>
 				<Card.Text>
-					<Table striped bordered hover>
+					<Table striped bordered hover className="table-texts">
 						<thead>
 							<tr>
 								<th>#</th>
