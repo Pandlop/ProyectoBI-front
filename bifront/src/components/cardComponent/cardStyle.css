@@ -1,18 +1,18 @@
-.card {
-    background-color: #2F3C4F; /* Color por defecto */
-    border-radius: 10px;
+.general-card {
+    background-color: #33415C; 
     padding: 20px;
     display: inline-block;
     max-width: 100%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
-    text-align: center;
+    border-radius: 27px;
+
     margin: 10px;
     box-sizing: border-box;
   }
   
   @media (max-width: 768px) {
-    .card {
+    .general-card {
       width: 100%; 
     }
   }

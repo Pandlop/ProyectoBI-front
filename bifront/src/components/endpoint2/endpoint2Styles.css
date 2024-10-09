@@ -1,0 +1,28 @@
+
+  
+  .dashboard .sidebar {
+    grid-area: sidebar;
+    background-color: #2F3C4F;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .cards-container {
+    display: grid;
+    margin: 1.3em;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto auto; 
+    flex-grow: 1;
+    grid-template-rows: auto 60%;
+    gap: 20px 10px;
+  }
+
+.heatmap {
+    grid-column: span 4;
+    background-color: #33415C;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
