@@ -5,7 +5,7 @@
 	border-radius: 27px;
 	margin: 1.3em;
 	padding: 1em;
-	flex-grow: 1;
+	flex-shrink: 0;
 }
 
 .stats-title {
@@ -20,11 +20,6 @@
 .accuracy-highlight {
 	color: #00a8ff;
 	font-weight: bold;
-}
-
-.dona {
-	max-height: 120%;
-	max-width: 120%;
 }
 
 .container-dona {

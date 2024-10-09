@@ -27,7 +27,10 @@ function Statistics() {
 		responsive: true,
 		plugins: {
 			legend: {
-				display: true,
+				display: true, // Asegúrate de que la leyenda esté visible
+				labels: {
+					color: "white", // Cambia el color de la leyenda a blanco
+				},
 			},
 		},
 		layout: {
