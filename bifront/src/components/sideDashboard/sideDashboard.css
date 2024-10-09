@@ -1,12 +1,18 @@
 .sidebar-dashboard {
 	width: 270px;
 	height: 100%;
-	background-color: #fff;
+	background-color: #33415c;
 	border-radius: 20px;
 	margin: 20px;
 	position: fixed;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
+}
+
+.sidebar-dashboard h1,
+.sidebar-dashboard p {
+	color: white;
+	font-weight: bold;
 }
 
 .sidebar-dashboard Nav {
@@ -27,7 +33,7 @@
 }
 
 .sidebar-item:hover {
-	background-color: #f0f0f0;
+	background-color: #7d8597;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 	font-weight: bold;
 }
