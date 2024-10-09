@@ -14,15 +14,48 @@
     grid-template-rows: auto auto; 
     flex-grow: 1;
     grid-template-rows: auto 60%;
-    gap: 20px 10px;
+    gap: 20px 5px;
   }
 
 .heatmap {
     grid-column: span 4;
     background-color: #33415C;
-    border-radius: 10px;
     padding: 20px;
     text-align: center;
     color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   
+    border-radius: 27px;
+    box-shadow: 5px 4px 24px -5px rgba(255, 255, 255, 0.24);
   }
+
+  .card-upload-csv-span-white{
+    color: white; font-size: 1.5em; font-weight: 700; word-wrap: break-word
+  }
+
+  .card-upload-csv-span-blue{
+    color: #001233; font-size: 1.5em;  font-weight: 800; word-wrap: break-word
+  }
+
+  .card-text-span-container{
+    margin-bottom: 20px;
+    width: 90%;
+    padding: 14px;
+  }
+
+  .title-card-measure{
+       color: white; font-size: 20px;  font-weight: 700; word-wrap: break-word
+  }
+
+  .measure-number{
+    color: white; font-size: 58px; font-weight: 1000; word-wrap: break-word
+
+  }
+
+  .card-image {
+    width: 5em;
+    height: auto;
+    display: block; 
+    margin-bottom: 20px;
+    margin-top: 34px;
+    
+}
