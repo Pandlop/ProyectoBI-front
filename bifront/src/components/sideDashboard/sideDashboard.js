@@ -9,27 +9,17 @@ function SideDashboard() {
 		<div className="sidebar-dashboard">
 			<Navbar className="flex-column vh-100">
 				<Navbar.Brand href="/" className="mx-auto my-3">
-					<img src="" alt="Bite Back" className="logo" width="100" />
+					{/* <img src="" alt="Bite Back" className="logo" width="100" /> */}
 					<h1>UNFPA</h1>
 				</Navbar.Brand>
-				<Nav className="flex-column w-100">
-					<Nav.Link
-						href="/"
-						className="d-flex align-items-center sidebar-item active"
-					>
-						<div className="sidebar-item">
-							{/* <MdDashboard className="sidebar-icon" /> */}
-							<p>Endpoint 1</p>
-						</div>
+				<Nav className="flex-column w-100 items">
+					<Nav.Link href="/" className="sidebar-item">
+						{/* <MdDashboard className="sidebar-icon" /> */}
+						Endpoint 1
 					</Nav.Link>
-					<Nav.Link
-						href="/reentrenar"
-						className="d-flex align-items-center sidebar-item"
-					>
-						<div className="sidebar-item">
-							{/* <MdDashboard className="sidebar-icon" /> */}
-							<p>Endpoint 2</p>
-						</div>
+					<Nav.Link href="/reentrenar" className="sidebar-item">
+						{/* <MdDashboard className="sidebar-icon" /> */}
+						Endpoint 2
 					</Nav.Link>
 				</Nav>
 			</Navbar>
