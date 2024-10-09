@@ -19,7 +19,7 @@ function SideDashboard() {
 					</Nav.Link>
 					<Nav.Link href="/reentrenar" className="sidebar-item">
 						<img src={e2} alt="logo" className="logo" />
-						<label>Endpoint 1</label>
+						<label>Endpoint 2</label>
 					</Nav.Link>
 				</Nav>
 			</Navbar>
