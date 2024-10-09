@@ -1,9 +1,9 @@
-import SidebarDashboard from "../sideDashboard/sideDashboard";
+import SideDashboard from "../sideDashboard/sideDashboard";
 
 function Endpoint1() {
 	return (
 		<>
-			<SidebarDashboard />
+			<SideDashboard />
 		</>
 	);
 }
