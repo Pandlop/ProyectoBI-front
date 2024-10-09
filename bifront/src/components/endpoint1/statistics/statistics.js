@@ -27,14 +27,14 @@ function Statistics() {
 		responsive: true,
 		plugins: {
 			legend: {
-				display: true, // Asegúrate de que la leyenda esté visible
+				display: true,
 				labels: {
-					color: "white", // Cambia el color de la leyenda a blanco
+					color: "white",
 				},
 			},
 		},
 		layout: {
-			padding: 0,
+			padding: "1em",
 		},
 	};
 
@@ -44,13 +44,13 @@ function Statistics() {
 				<Card.Title>
 					<h2 className="stats-title">Estadísticas</h2>
 				</Card.Title>
-				<Card.Text>
-					<label className="stats-text">
-						Accuracy: <span className="accuracy-highlight">45%</span>
-					</label>
+				<Card.Text className="stats-container">
 					<div style={{ height: "100%" }} className="container-dona">
 						<Doughnut className="dona" data={data} options={options} />
 					</div>
+					<label className="stats-text">
+						Accuracy: <span className="accuracy-highlight">45%</span>
+					</label>
 				</Card.Text>
 			</Card.Body>
 		</Card>
