@@ -25,7 +25,14 @@ function Statistics() {
 
 	const options = {
 		responsive: true,
-		maintainAspectRatio: false, // Desactiva el ratio fijo para ajustarse al contenedor
+		plugins: {
+			legend: {
+				display: true,
+			},
+		},
+		layout: {
+			padding: 0,
+		},
 	};
 
 	return (
@@ -38,7 +45,9 @@ function Statistics() {
 					<label className="stats-text">
 						Accuracy: <span className="accuracy-highlight">45%</span>
 					</label>
-					<Doughnut data={data} options={options} />
+					<div style={{ height: "100%" }} className="container-dona">
+						<Doughnut className="dona" data={data} options={options} />
+					</div>
 				</Card.Text>
 			</Card.Body>
 		</Card>

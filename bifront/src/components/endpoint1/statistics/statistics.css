@@ -21,3 +21,13 @@
 	color: #00a8ff;
 	font-weight: bold;
 }
+
+.dona {
+	max-height: 120%;
+	max-width: 120%;
+}
+
+.container-dona {
+	display: flex;
+	justify-content: center;
+}
