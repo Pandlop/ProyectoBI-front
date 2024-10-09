@@ -1,0 +1,14 @@
+.stats-card.card {
+	background-color: #33415c;
+	overflow: hidden;
+	color: white;
+	border-radius: 27px;
+	margin: 1.3em;
+	padding: 1em;
+	flex-grow: 1;
+}
+
+.stats-title {
+	font-weight: bold;
+	font-size: 1.7rem;
+}
