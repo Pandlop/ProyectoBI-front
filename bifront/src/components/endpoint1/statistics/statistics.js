@@ -4,13 +4,12 @@ import {
     ArcElement,
     Tooltip,
     Legend,
-    DoughnutController // Asegúrate de registrar este controlador
+    DoughnutController 
 } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import "./statistics.css";
 import { Card } from "react-bootstrap";
 
-// Registrar todos los elementos y controladores necesarios
 ChartJS.register(ArcElement, Tooltip, Legend, DoughnutController);
 
 function Statistics() {
