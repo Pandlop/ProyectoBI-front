@@ -11,14 +11,16 @@ import { Card } from "react-bootstrap";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function Statistics() {
+function Statistics({ response }) {
+	const conteoClases = response?.conteo_clases || { 3: 0, 4: 0, 5: 0 };
+
 	const data = {
-		labels: ["Completed", "Pending", "Initiated"],
+		labels: ["Clase 3", "Clase 4", "Clase 5"], // Etiquetas para las clases
 		datasets: [
 			{
-				label: "Classification Status",
-				data: [242, 94, 61],
-				backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
+				label: "Conteo por clase",
+				data: [conteoClases[3], conteoClases[4], conteoClases[5]], // Datos desde el response
+				backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"], // Colores de las clases
 			},
 		],
 	};
@@ -44,14 +46,11 @@ function Statistics() {
 				<Card.Title>
 					<h2 className="stats-title">Estadísticas</h2>
 				</Card.Title>
-				<Card.Text className="stats-container">
+				<div className="stats-container">
 					<div style={{ height: "100%" }} className="container-dona">
 						<Doughnut className="dona" data={data} options={options} />
 					</div>
-					<label className="stats-text">
-						Accuracy: <span className="accuracy-highlight">45%</span>
-					</label>
-				</Card.Text>
+				</div>
 			</Card.Body>
 		</Card>
 	);
