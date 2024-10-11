@@ -37,10 +37,14 @@ function Endpoint2() {
 				.then((data) => {
 					setResponse(data);
 					console.log(data);
+					console.log(data.classification_report)
 				})
 				.catch((err) => console.error(err));
 		}
+
+		
 	}
+	
 
 	return (
 		<>
@@ -85,7 +89,7 @@ function Endpoint2() {
 						/>
 						<h4 className="title-card-measure">F1 Score</h4>
 						<p className="measure-number">
-							{response ? parseFloat(response.f1_score).toFixed(3) : "0"}%{" "}
+							{response ? parseFloat(response.f1_score).toFixed(3)* 100: "0"}%{" "}
 						</p>
 					</Card>
 
@@ -97,7 +101,7 @@ function Endpoint2() {
 						/>
 						<h4 className="title-card-measure">Recall</h4>
 						<p className="measure-number">
-							{response ? parseFloat(response.recall).toFixed(3) : "0"}%
+							{response ? parseFloat(response.recall).toFixed(3) * 100 : "0"}%
 						</p>
 					</Card>
 
@@ -114,13 +118,17 @@ function Endpoint2() {
 						/>
 						<h4 className="title-card-measure">Precision</h4>
 						<p className="measure-number">
-							{response ? parseFloat(response.accuracy).toFixed(3) : "0"}%
+							{response ? parseFloat(response.accuracy).toFixed(3)* 100 : "0"}%
 						</p>
 					</Card>
 
 					<div className="heatmap">
 						<h1>Heatmap</h1>
-						<HeatmapChart />
+						{response && response.classification_report ? (
+							<HeatmapChart metrics={response.classification_report} />
+						) : (
+							<p>Esperando resultados...</p>  
+						)}
 					</div>
 				</div>
 			</div>

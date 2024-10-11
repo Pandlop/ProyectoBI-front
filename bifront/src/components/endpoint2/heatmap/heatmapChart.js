@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
 
-function HeatmapChart() {
+function HeatmapChart({ metrics }) {
+	// Extrae los valores de precision, recall y f1-score de metrics
+	const precisionData = [metrics[3].precision, metrics[4].precision, metrics[5].precision];
+	const recallData = [metrics[3].recall, metrics[4].recall, metrics[5].recall];
+	const f1ScoreData = [metrics[3]['f1-score'], metrics[4]['f1-score'], metrics[5]['f1-score']];
+
 	const [options] = useState({
 		chart: {
 			type: "heatmap",
-			foreColor: "#ffffff",
+			foreColor: "#ffffff",  
 		},
 		plotOptions: {
 			heatmap: {
@@ -14,37 +19,57 @@ function HeatmapChart() {
 					ranges: [
 						{
 							from: 0,
-							to: 60,
-							color: "#008FFB",
+							to: 1,
+							color: "#008FFB",  
 						},
 					],
 				},
 			},
 		},
 		xaxis: {
-			categories: ["Clase 3", "Clase 4", "Clase 5"],
+			categories: ["Clase 3", "Clase 4", "Clase 5"], 
+			labels: {
+				style: {
+					colors: "#ffffff",  
+				},
+			},
+		},
+		yaxis: {
+			labels: {
+				style: {
+					colors: "#ffffff",  
+				},
+			},
 		},
 		title: {
 			text: "Heatmap Metrics",
+		},
+		legend: {
+			labels: {
+				colors: "#ffffff",  
+			},
+		},
+		tooltip: {
+			theme: "dark",  
+			style: {
+				fontSize: "14px",
+				colors: ["#000000"],  
+			},
 		},
 	});
 
 	const [series] = useState([
 		{
-			name: "Metric 1",
-			data: [10, 20, 30],
+			name: "Precision",
+			data: precisionData, 
 		},
 		{
-			name: "Metric 2",
-			data: [20, 30, 10],
+			name: "Recall",
+			data: recallData,  
 		},
 		{
-			name: "Metric 3",
-			data: [30, 10, 50],
-		},
-		{
-			name: "Metric 4",
-			data: [40, 50, 60],
+			name: "F1 Score",
+			data: f1ScoreData,  
 		},
 	]);
 
